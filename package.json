@@ -1,0 +1,29 @@
+{
+  "name": "mantis",
+  "version": "1.0.0",
+  "description": "Static Site Generator",
+  "main": "cli.js",
+  "type": "module",
+  "bin": {
+    "mantis": ".cli.js"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "author": "Alwar Müra",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.2.0",
+    "fs-extra": "^11.1.0",
+    "meow": "^11.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-node": "^11.1.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": []
+}
