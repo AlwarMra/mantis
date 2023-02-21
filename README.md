@@ -1,1 +1,1 @@
-#Mantis: Static Site Generator
+# Mantis: Static Site Generator

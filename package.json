@@ -8,7 +8,9 @@
     "mantis": ".cli.js"
   },
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "start": "mantis start",
+    "build": "mantis build"
   },
   "author": "Alwar Müra",
   "license": "ISC",
@@ -25,5 +27,13 @@
   "directories": {
     "lib": "lib"
   },
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlwarMra/mantis.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AlwarMra/mantis/issues"
+  },
+  "homepage": "https://github.com/AlwarMra/mantis#readme"
 }
