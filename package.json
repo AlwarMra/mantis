@@ -8,9 +8,7 @@
     "mantis": ".cli.js"
   },
   "scripts": {
-    "test": "npm run test",
-    "start": "mantis start",
-    "build": "mantis build"
+    "test": "npm run test"
   },
   "author": "Alwar Müra",
   "license": "ISC",
