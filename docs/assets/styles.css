@@ -1,0 +1,414 @@
+:root {
+  --alpha: 75, 200, 127;
+  --beta: 180, 101, 195;
+  --delta: 64, 64, 64;
+  --gamma: #f3f6fa;
+  /* 
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
+   */
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: rgba(var(--alpha), 0.12);
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: rgb(var(--delta));
+}
+p,
+li,
+span,
+a,
+code,
+button,
+pre {
+  font-size: 1.1rem;
+  color: rgb(var(--delta));
+}
+p,
+li {
+  font-family: 'Montserrat', serif;
+  margin-bottom: 1rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+ol,
+ul {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+ul {
+  list-style: disc;
+}
+ul ul {
+  list-style: circle;
+}
+ul ul ul {
+  list-style: square;
+}
+ol {
+  list-style: decimal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: rgb(var(--alpha));
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1.1rem;
+}
+strong {
+  font-family: 'Montserrat', serif;
+  font-weight: bold;
+}
+em {
+  font-family: 'Montserrat', serif;
+  font-style: italic;
+}
+a {
+  text-decoration: none;
+  color: rgba(var(--alpha), 0.8);
+  transition: color ease-in-out 200ms;
+}
+a:hover,
+a:focus {
+  color: rgba(var(--beta), 0.8);
+  transition: color ease-in-out 200ms;
+}
+a:visited {
+  color: rgba(var(--beta), 0.8);
+}
+button {
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  display: inline-block;
+  background-color: rgba(var(--alpha), 0.1);
+  border-color: rgba(var(--beta), 0.3);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  color: rgba(var(--delta), 0.75);
+}
+button:hover,
+button:focus {
+  background-color: rgba(var(--alpha), 0.2);
+  border-color: rgba(var(--beta), 0.6);
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+}
+button a {
+  color: rgba(var(--delta), 0.9);
+}
+blockquote {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  padding: 0.5rem 1rem;
+  background-color: var(--gamma);
+  border-left: 3px solid rgba(var(--beta), 0.3);
+}
+blockquote p {
+  color: rgba(var(--delta), 0.75);
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+pre {
+  padding: 0.8rem;
+  overflow: auto;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(var(--beta), 0.3);
+  background-color: var(--gamma);
+}
+code {
+  color: rgba(var(--delta), 0.75);
+}
+header,
+footer {
+  max-width: 64rem;
+  padding: 3rem 3rem 2rem;
+  margin: 0 auto;
+  color: var(--epsilon);
+  background-color: transparent;
+  position: relative;
+}
+header:after {
+  content: '';
+  height: 6px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: linear-gradient(
+    to right,
+    rgba(var(--alpha), 0.8),
+    rgba(var(--beta), 0.8)
+  );
+}
+header p:first-child {
+  font-size: 3rem;
+  font-family: 'Roboto', sans-serif;
+}
+header p:nth-child(2) {
+  font-size: 1.8rem;
+}
+footer {
+}
+main {
+  max-width: 64rem;
+  padding: 2rem 6rem;
+  margin: 0 auto;
+}
+details {
+  margin-bottom: 1rem;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  border-bottom: 1px solid rgba(var(--beta));
+}
+details summary {
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+details summary ~ * {
+  padding: 0 1.5rem;
+}
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details summary::before,
+details summary::after {
+  content: '';
+  width: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: rgba(var(--delta));
+  position: absolute;
+  left: 95%;
+  top: 50%;
+}
+details summary::before {
+  transform: rotate(90deg);
+  transition: all 0.3s ease-in-out;
+}
+details[open] summary::before {
+  transform: rotate(0);
+  transition: all 0.3s ease-in-out;
+}
+
+table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: keep-all;
+}
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+th,
+td {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(var(--beta));
+}
+th {
+  font-weight: bold;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+@media screen and (max-width: 42em) {
+  header p:first-child {
+    font-size: 2rem;
+  }
+  header p:nth-child(2) {
+    font-size: 1.4rem;
+  }
+  header,
+  main {
+    padding: 2rem 1rem;
+  }
+}
