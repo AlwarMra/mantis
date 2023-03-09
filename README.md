@@ -4,7 +4,7 @@
 
 Mantis is a simple static site generator powered by [Node.js](https://nodejs.org/en/). It generates pages with [EJS](https://ejs.co/) that can be either [Markdown](https://www.markdownguide.org/), HTML or EJS themselves.
 
-[Output example with default template](https://github.com/AlwarMra/mantis)
+[Output example with default template](https://mantis-ssg.vercel.app/)
 
 ## Gettings Started
 
