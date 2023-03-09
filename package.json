@@ -1,5 +1,5 @@
 {
-  "name": "mantis",
+  "name": "mantis-ssg",
   "version": "1.0.0",
   "description": "Mantis: Static Site Generator",
   "main": "cli.js",
