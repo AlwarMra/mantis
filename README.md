@@ -83,3 +83,7 @@ export default {
      -h, --help                      Display this help text
      -v, --version                   Display Mantis version
 ```
+
+## Docs
+
+Visit [full documentation](https://mantis-ssg.vercel.app/docs) for more precise information.

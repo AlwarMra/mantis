@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#157878" />
+    <meta name="description" content="" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <title>Mantis SSG</title>
+  </head>
+  <body>
+    <header>
+      <p>Mantis: Static Site Generator</p>
+      <p>Mantis is a still, simple Node.js site generator</p>
+
+      <div class="link-container">
+        <a class="nav-link" href="/"> Home </a
+        ><a class="nav-link" href="/docs/index.html"> Docs </a>
+      </div>
+    </header>
+    <main><h1 id="docs">Docs</h1>
+<h3 id="commands">Commands</h3>
+<h4 id="mantis-init">mantis init</h4>
+<p>This command will create the general site&#39;s folder structure on the current directory.</p>
+<h4 id="mantis-serve">mantis serve</h4>
+<p>Mantis will build the site and listen to any changes made on /site directory to work in a live server. Be aware that every change will rebuild the site, erasing anything that was on the /build directory.</p>
+<h4 id="mantis-build">mantis build</h4>
+<p>Mantis will build the web based on the /site directory folder structure</p>
+<h4 id="config-file">config file</h4>
+<p>The config file lives in the root directory y has the following shape:</p>
+<p>The site.config.js should be as follows:</p>
+<pre><code>export default {
+  srcPath: &#39;./site&#39;,
+  destPath: &#39;./build&#39;,
+  site:{
+    title: &#39;Mantis SSG&#39;,
+    /.../
+  }
+}
+</code></pre>
+<p>If you want to add more data general data, remember to include it within the site property and render it accordingly with EJS, for instance:</p>
+<pre><code>&lt;html&gt;
+  &lt;body&gt;
+  &lt;p&gt;&lt;%- site.author %&gt;&lt;/p&gt;
+    &lt;%- body %&gt;
+  &lt;/body&gt;
+  &lt;a href=&quot;&lt;%- site.link %&gt;&quot;&gt;My link&lt;/a&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="layout">Layout</h4>
+<p>This static site generator is build with <a href="https://ejs.co/">EJS</a>. Each theme can have different layouts, to refer to them put its name at the top of the front matter. Every layout should have a &lt;%- body %&gt; tag within it.</p>
+<h4 id="pages">Pages</h4>
+<p>Pages can be built with EJS, Markdown o plain HTML. Every page will be build as an index.html withtin its own directory, wether is specified or not.</p>
+<p>If you need to add more specific data to any of your pages, add the next block at the top of the file:</p>
+<pre><code>---
+template: default
+date: 20-01-2023
+tags:
+  - games
+  - stuff
+  - tips
+---
+</code></pre>
+<p>Any data that is put within the <em>front matter</em> will be accesible through each template with the <em>page</em> attribute:</p>
+<pre><code>&lt;html&gt;
+  &lt;body&gt;
+  &lt;p&gt;&lt;%- page.date %&gt;&lt;/p&gt;
+    &lt;%- body %&gt;
+    &lt;div&gt;
+    &lt;% if (page.tags) { %&gt;
+        &lt;% page.tags.forEach(function(tag) { %&gt;
+        &lt;span&gt;&lt;%= tag %&gt;&lt;/span&gt;
+        &lt;% }) %&gt;
+    &lt;% } %&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="partials">Partials</h4>
+<p>Partials are small pieces of code meant to be reusable. To insert any of this blocks within pages:</p>
+<pre><code>&lt;%- include(&#39;partials/block&#39;) %&gt;
+</code></pre>
+</main>
+    <footer></footer>
+  </body>
+</html>

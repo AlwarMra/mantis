@@ -13,17 +13,22 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="/assets/styles.css" />
     <title>Mantis SSG</title>
   </head>
   <body>
     <header>
       <p>Mantis: Static Site Generator</p>
       <p>Mantis is a still, simple Node.js site generator</p>
+
+      <div class="link-container">
+        <a class="nav-link" href="/"> Home </a
+        ><a class="nav-link" href="/docs/index.html"> Docs </a>
+      </div>
     </header>
     <main><h1 id="what-is-mantis">What is Mantis?</h1>
 <p>Mantis is a simple static site generator powered by <a href="https://nodejs.org/en/">Node.js</a>. It generates pages with <a href="https://ejs.co/">EJS</a> that can be either <a href="https://www.markdownguide.org/">Markdown</a>, HTML or EJS themselves.</p>
-<p><a href="https://github.com/AlwarMra/mantis">Output example with default template</a></p>
+<p><a href="https://github.com/AlwarMra/mantis">Source code</a></p>
 <h2 id="gettings-started">Gettings Started</h2>
 <p>To install mantis run:</p>
 <pre><code>npm i mantis-ssg
@@ -49,13 +54,6 @@
   \partials
 site.config.js
 </code></pre>
-<p>The site.config.js should be as follows:</p>
-<pre><code>export default {
-  srcPath: &#39;./site&#39;,
-  destPath: &#39;./build&#39;,
-  site: &#39;Mantis SSG&#39;,
-}
-</code></pre>
 <h2 id="commands">Commands</h2>
 <pre><code>  Initialize a new site:
 
@@ -76,6 +74,8 @@ site.config.js
      -h, --help                      Display this help text
      -v, --version                   Display Mantis version
 </code></pre>
+<h2 id="docs">Docs</h2>
+<p><a href="/docs/index.html">Full documentation</a></p>
 </main>
     <footer></footer>
   </body>
