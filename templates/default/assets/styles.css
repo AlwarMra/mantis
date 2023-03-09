@@ -370,6 +370,36 @@ details[open] summary::before {
   transition: all 0.3s ease-in-out;
 }
 
+table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: keep-all;
+}
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+th,
+td {
+  padding: 0.5rem 1rem;
+  border: 1px solid rgba(var(--beta));
+}
+th {
+  font-weight: bold;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
 @media screen and (max-width: 42em) {
   header p:first-child {
     font-size: 2rem;
