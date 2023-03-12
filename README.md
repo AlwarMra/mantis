@@ -8,10 +8,10 @@ Mantis is a simple static site generator powered by [Node.js](https://nodejs.org
 
 ## Gettings Started
 
-To install mantis run:
+To install mantis globally run:
 
 ```
-npm i mantis-ssg
+npm i -g mantis-ssg
 ```
 
 or run the cli directly with:
