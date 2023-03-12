@@ -5,10 +5,12 @@
   "main": "cli.js",
   "type": "module",
   "bin": {
-    "mantis": ".cli.js"
+    "mantis": "./lib/cli.js"
   },
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "site:start": "mantis start",
+    "site:build": "cross-env NODE_ENV=production mantis build"
   },
   "author": "Alwar Müra",
   "license": "ISC",
